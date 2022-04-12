@@ -16,34 +16,43 @@
     <body>
         <div class="first-container">
             <div class="question-meter">
-                <p class="question-p">Question 1/4</p>
-                <progress class="meter" max="100" value="30"></progress>
+                <p class="question-p">Question <span id="qNumber"></span>/4</p>
+                <progress
+                    class="meter"
+                    value="30"
+                    max="100"
+                    id="meter"
+                ></progress>
             </div>
             <div class="score-container">
                 <p style="margin: 0">Score</p>
-                <p class="score">0</p>
+                <p class="score" id="totalScore"></p>
             </div>
         </div>
         <div class="second-container">
-            <h1 class="question">What is 1+1?</h1>
+            <h1 class="question">What is <span id="question"></span>?</h1>
             <div class="choices">
-                <div class="child1">
+                <div class="child1" onclick="checkAnswer(0)">
                     <div class="child-inner">A</div>
-                    2
+                    <span class="option"></span>
                 </div>
-                <div class="child2">
+                <div class="child2" onclick="checkAnswer(1)">
                     <div class="child-inner">B</div>
-                    4
+                    <span class="option"></span>
                 </div>
-                <div class="child3">
+                <div class="child3" onclick="checkAnswer(2)">
                     <div class="child-inner">C</div>
-                    5
+                    <span class="option"></span>
                 </div>
-                <div class="child4">
+                <div class="child4" onclick="checkAnswer(3)">
                     <div class="child-inner">D</div>
-                    7
+                    <span class="option"></span>
                 </div>
             </div>
+        </div>
+        <div class="third-container" width="500px" height="600px">
+            <h1>Total Score : <span class="score"></span></h1>
+            <!-- 완료페이지-->
         </div>
         <script src="js/script.js" onload="updatePage()"></script>
     </body>

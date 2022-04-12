@@ -67,6 +67,14 @@ body {
     height: 600px;
 }
 
+.third-container {
+    visibility: hidden;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 progress[value] {
     -webkit-appearance: none;
     appearance: none;
