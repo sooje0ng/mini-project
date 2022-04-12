@@ -71,13 +71,9 @@ body {
 
 .third-container {
     visibility: hidden;
-    width: 600px;
-    height: 500px;
     display: flex;
-    align-items: center;
     flex-direction: column;
     color: #5eaaec;
-    margin-top: 200px;
 }
 progress[value] {
     -webkit-appearance: none;
