@@ -50,16 +50,18 @@ function checkAnswer(num) {
         document.getElementsByClassName(
             "child" + (num + 1)
         )[0].style.backgroundColor = "#ecf5ff";
-        if (count == arrQ.length) {
+        if (count === arrQ.length - 1) {
             document.getElementsByClassName(
                 "first-container"
-            )[0].style.visibility = hidden;
+            )[0].style.display = "none";
             document.getElementsByClassName(
                 "second-container"
-            )[0].style.visibility = hidden;
+            )[0].style.display = "none";
             document.getElementsByClassName(
                 "third-container"
-            )[0].style.visibility = visible;
+            )[0].style.visibility = "visible";
+            document.getElementsByClassName("score")[1].innerHTML =
+                document.getElementById("totalScore").innerHTML;
         } else {
             count++;
         }
